@@ -1,0 +1,89 @@
+//LAYOUT
+.app {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 50px 350px 1fr;
+    min-height: 100vh;
+
+    .header {
+        grid-area: 1 / 1 / span 1 / -1;
+
+    }
+
+    .sidebar_blue {
+        grid-area: 2 / 1 / span 1 / span 1;
+
+    }
+
+    .sidebar {
+        grid-area: 2 / 2 / span 1 / span 1;
+
+    }
+
+    .main {
+        grid-area: 2 / 3 / span 1 / span 1;
+
+    }
+
+    @media screen and (max-width: 1080px) {
+        grid-template-rows: auto 1fr 50px;
+        grid-template-columns: 350px 1fr;
+
+        .header {
+            grid-area: 1 / 1 / span 1 / -1;
+
+        }
+
+        .sidebar_blue {
+            grid-area: 3 / 1 / span 1 / -1;
+
+        }
+
+        .sidebar {
+            grid-area: 2 / 1 / span 1 / span 1;
+
+        }
+
+        .main {
+            grid-area: 2 / 2 / span 1 / span 1;
+
+        }
+
+    }
+
+    @media screen and (max-width: 760px) {
+
+        .header {
+            grid-area: 1 / 1 / span 1 / -1;
+
+        }
+
+        .sidebar_blue {
+            grid-area: 3 / 1 / span 1 / -1;
+
+        }
+
+        .sidebar {
+            grid-area: 2 / 1 / span 1 / span 1;
+            transform: translate(0%, 0);
+            transition: transform 350ms ease;
+
+            &.hidden {
+                transform: translate(-100%, 0);
+                transition: transform 350ms ease;
+            }
+
+        }
+
+        .main {
+            grid-area: 2 / 1 / span 1 / span -1;
+
+        }
+
+    }
+
+
+
+
+
+}

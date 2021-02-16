@@ -1,0 +1,46 @@
+//sidebar
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+
+}
+
+//searchbox
+.searchbox {
+  border-right: 2px solid rgba(255, 255, 255, 0.37);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.37);
+
+    form {
+      display: flex;
+      align-items: center;
+      padding: .75rem .5rem;
+      background-color: white;
+
+      .searchbox_icon {
+        display: flex;
+        margin-right: .5rem;
+
+
+        .fa-search {
+          padding: 0.5rem;
+          color: $color_primary;
+          
+        }
+
+      
+      }
+
+      .searchbox_input {
+        display: flex;
+        width: 100%;
+        
+        input {
+          width: 100%;
+          border: 0;
+    
+        }
+      }
+    }
+  }
+  
